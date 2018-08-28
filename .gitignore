@@ -1,0 +1,6 @@
+.DS_Store
+.gradle/
+/generated/
+.metadata
+de.sczuka.osgi.servlets.provider/generated/
+de.sczuka.osgi.servlets.provider/bin/

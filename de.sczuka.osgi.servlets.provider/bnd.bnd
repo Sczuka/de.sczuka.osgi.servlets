@@ -1,0 +1,22 @@
+-buildpath: \
+	osgi.annotation; version=6.0.1,\
+	osgi.core; version=6.0,\
+	osgi.cmpn; version=6.0,\
+	org.apache.felix.http.servlet-api; version=1.1
+
+-contract: *
+
+-testpath: \
+	${junit}
+
+javac.source: 1.8
+javac.target: 1.8
+
+-includeresource=\
+	{resources/full.render.js=resources/full.render.js}, \
+	{resources/viz.js=resources/viz.js} \
+	
+
+Bundle-Version: 0.0.0.${tstamp}
+Private-Package: de.sczuka.osgi.servlets.provider
+Require-Capability: osgi.implementation; filter:="(&(osgi.implementation=osgi.http)(version>=1.0)(!(version>=2.0)))"
