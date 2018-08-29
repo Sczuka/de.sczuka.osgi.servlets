@@ -17,6 +17,6 @@ javac.target: 1.8
 	{resources/viz.js=resources/viz.js} \
 	
 
-Bundle-Version: 0.0.0.${tstamp}
+Bundle-Version: 0.0.1.${githead}
 Private-Package: de.sczuka.osgi.servlets.provider
 Require-Capability: osgi.implementation; filter:="(&(osgi.implementation=osgi.http)(version>=1.0)(!(version>=2.0)))"
