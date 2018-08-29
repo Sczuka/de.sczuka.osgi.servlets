@@ -55,3 +55,5 @@ e.g.:
 ```
 http://any.local.url/my-sertificate.cer
 ```
+
+The location of the proxy certificate is done by the variable *PROXY_CERTIFICATE_URL*.
