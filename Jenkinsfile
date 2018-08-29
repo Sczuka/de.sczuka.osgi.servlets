@@ -33,16 +33,19 @@ pipeline {
             }
          }
       }
+
       stage('Post Build') {
          steps {
             script {
                step([$class: 'JUnitResultArchiver', testResults: '**/generated/test-reports/**/*.xml'])
-               if (currentBuild.result == 'SUCCESS') {
+               if ((currentBuild.result == null) || (currentBuild.result == 'SUCCESS')) {
                   step([
                      $class: 'ArtifactArchiver',
-                     artifacts: '*/generated/*.jar',
+                     artifacts: '**/generated/*.jar',
                      fingerprint: false
                   ])
+               } else {
+                  echo "currentBuild.result: " + currentBuild.result
                }
             }
          }
