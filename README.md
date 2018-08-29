@@ -6,7 +6,7 @@ Servlets for monitoring the OSGi environment.
 
 | Name | Description |
 |---|---|
-| [ServiceGraph](ServiceGraph) | OSGi component graph as graphics |
+| [ServiceGraph](https://github.com/Sczuka/de.sczuka.osgi.servlets#servicegraph) | OSGi component graph as graphics |
 
 
 ### ServiceGraph
